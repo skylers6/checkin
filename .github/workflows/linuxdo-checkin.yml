@@ -1,4 +1,4 @@
-name: Daily Check-in
+name: Linuxdo-checkin
 
 on:
   schedule:
