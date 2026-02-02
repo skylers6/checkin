@@ -200,7 +200,7 @@ class LinuxDoUpgrade:
             # 检测 Cloudflare
             if "Just a moment" in self.page.title:
                 logger.warning("检测到 Cloudflare 验证页面，等待自动跳过...")
-                time.sleep(10)
+                time.sleep(20)
             
             # 等待登录框出现
             logger.info("寻找登录输入框...")
