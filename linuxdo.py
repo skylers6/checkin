@@ -71,8 +71,8 @@ if not PASSWORD:
 GOTIFY_URL = os.environ.get("GOTIFY_URL")
 GOTIFY_TOKEN = os.environ.get("GOTIFY_TOKEN")
 SC3_PUSH_KEY = os.environ.get("SC3_PUSH_KEY")
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")  # Telegram Bot Token
-TG_CHAT_ID = os.environ.get("TG_CHAT_ID")  # Telegram Chat ID
+TG_BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN")  # Telegram Bot Token
+TG_CHAT_ID = os.environ.get("TELEGRAM_USERID")  # Telegram Chat ID
 WECHAT_API_URL = os.environ.get("WECHAT_API_URL")   # 自定义微信 API 地址
 WECHAT_AUTH_TOKEN = os.environ.get("WECHAT_AUTH_TOKEN") # 自定义微信 Token
 LINUXDO_PROXY = os.environ.get("LINUXDO_PROXY")  # 代理设置
@@ -200,7 +200,7 @@ class LinuxDoUpgrade:
             # 检测 Cloudflare
             if "Just a moment" in self.page.title:
                 logger.warning("检测到 Cloudflare 验证页面，等待自动跳过...")
-                time.sleep(20)
+                time.sleep(10)
             
             # 等待登录框出现
             logger.info("寻找登录输入框...")
